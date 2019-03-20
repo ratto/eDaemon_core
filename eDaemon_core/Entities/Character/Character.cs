@@ -48,5 +48,29 @@ namespace eDaemon_core.Entities.Character
             HPCurrent = HPTotal;
         }
 
+        public void AddEnhancement(Enhancement enhancement)
+        {
+            Enhancements.Add(enhancement);
+        }
+        public void RemoveEnhancement(Enhancement enhancement)
+        {
+            Enhancements.Remove(enhancement);
+        }
+        public void AddCustomSkill(CustomSkill skill)
+        {
+            Skill.Add(skill);
+        }
+        public void RemoveSkill(CustomSkill skill)
+        {
+            Skill.Remove(skill);
+        }
+        public void AddWpnSkill(WeaponSkill wpnskill)
+        {
+            WpnSkill.Add(wpnskill);
+        }
+        public void RemoveWpnSkill(WeaponSkill wpnskill)
+        {
+            WpnSkill.Remove(wpnskill);
+        }
     }
 }

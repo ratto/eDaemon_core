@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using eDaemon_core.Entities.Equipment.Enums;
 
 namespace eDaemon_core.Entities.Equipment
 {
@@ -8,7 +7,8 @@ namespace eDaemon_core.Entities.Equipment
         public int Initiative { get; set; }
         public int MinReach { get; set; }
         public int MaxReach { get; set; }
-        List<WpnDamageType> WpnDamage = new List<WpnDamageType>();
+        public WeaponType Type { get; set; }
+        List<WpnDamage> WpnDamage = new List<WpnDamage>();
 
         public Weapon()
         {
@@ -19,10 +19,20 @@ namespace eDaemon_core.Entities.Equipment
             Name = name;
             Initiative = initiative;
         }
-
-        public void InsertDamage(DamageType damageType, int minDamage, int maxDamage)
+        public Weapon(int initiative, int minReach, int maxReach)
         {
-            
+            Initiative = initiative;
+            MinReach = minReach;
+            MaxReach = maxReach;
+        }
+
+        public void AddDamage(WpnDamage damage)
+        {
+            WpnDamage.Add(damage);
+        }
+        public void RemoveDamage(WpnDamage damage)
+        {
+            WpnDamage.Remove(damage);
         }
     }
 }

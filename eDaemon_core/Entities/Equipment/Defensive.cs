@@ -7,7 +7,7 @@ namespace eDaemon_core.Entities.Equipment
     {
         public int DexPenalty { get; set; }
         public int AgiPenalty { get; set; }
-
+        List<PIType> ProtectionIndex = new List<PIType>();
 
         public Defensive()
         {
@@ -20,9 +20,13 @@ namespace eDaemon_core.Entities.Equipment
             AgiPenalty = agiPenalty;
         }
 
-        public void InsertPI(DamageType pitype, int pivalue)
+        public void AddPI(PIType protection)
         {
-            
+            ProtectionIndex.Add(protection);
+        }
+        public void RemovePI(PIType protection)
+        {
+            ProtectionIndex.Remove(protection);
         }
     }
 }

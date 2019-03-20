@@ -18,14 +18,23 @@ namespace eDaemon_core.Entities.Magic
     {
         private int _id;
         public string Name { get; set; }
-        public Form MagicForm { get; set; }
         public int MPCost { get; set; }
         public string Description { get; set; }
-        HashSet<Path> MagicPath = new HashSet<Path>();
+        public Form MagicForm { get; set; }
+        List<Path> MagicPath = new List<Path>();
 
         public Magic()
         {
 
+        }
+
+        public void AddPath(Path path)
+        {
+            MagicPath.Add(path);
+        }
+        public void RemovePath(Path path)
+        {
+            MagicPath.Remove(path);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using eDaemon_core.Entities.Equipment;
+﻿using eDaemon_core.Entities.Equipment;
 
 namespace eDaemon_core.Entities.Character
 {
