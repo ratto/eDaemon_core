@@ -1,34 +1,28 @@
-﻿namespace eDaemon_core.Entities.Equipment
+﻿using System.Collections.Generic;
+using eDaemon_core.Entities.Equipment.Enums;
+
+namespace eDaemon_core.Entities.Equipment
 {
-    class Weapon
+    class Weapon : Equipment
     {
-        public string Name { get; set; }
-        public int MinDamage { get; set; }
-        public int MaxDamage { get; set; }
         public int Initiative { get; set; }
         public int MinReach { get; set; }
         public int MaxReach { get; set; }
+        List<WpnDamageType> WpnDamage = new List<WpnDamageType>();
 
         public Weapon()
         {
 
         }
-        public Weapon(string name, int minDamage, int maxDamage, int initiative)
+        public Weapon(string name, int initiative)
         {
             Name = name;
-            MinDamage = minDamage;
-            MaxDamage = maxDamage;
             Initiative = initiative;
         }
 
-        public Weapon(string name, int minDamage, int maxDamage, int initiative, int minReach, int maxReach)
+        public void InsertDamage(DamageType damageType, int minDamage, int maxDamage)
         {
-            Name = name;
-            MinDamage = minDamage;
-            MaxDamage = maxDamage;
-            Initiative = initiative;
-            MinReach = minReach;
-            MaxReach = maxReach;
+            
         }
     }
 }

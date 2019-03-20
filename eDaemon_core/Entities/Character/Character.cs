@@ -22,6 +22,7 @@ namespace eDaemon_core.Entities.Character
         public int SPTotal { get; set; }
 
         CharAttribute Attribute = new CharAttribute();
+        List<Enhancement> Enhancements = new List<Enhancement>();
         List<CustomSkill> Skill = new List<CustomSkill>();
         List<WeaponSkill> WpnSkill = new List<WeaponSkill>();
 
