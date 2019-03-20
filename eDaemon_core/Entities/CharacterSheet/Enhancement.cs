@@ -4,7 +4,7 @@ using System.Text;
 
 namespace eDaemon_core.Entities.CharacterSheet
 {
-    class Enhancements
+    class Enhancement
     {
         public int Name { get; set; }
         public int Cost { get; set; }
