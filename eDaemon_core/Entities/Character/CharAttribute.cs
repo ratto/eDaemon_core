@@ -5,7 +5,7 @@
  * temporary and other attribute changes that may happen.
  **/
 
-namespace eDaemon_core
+namespace eDaemon_core.Entities.Character
 {
     class CharAttribute
     {

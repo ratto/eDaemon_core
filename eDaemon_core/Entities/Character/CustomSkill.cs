@@ -5,7 +5,7 @@
  * and so on.
  **/
 
-namespace eDaemon_core.Entities.CharacterSheet
+namespace eDaemon_core.Entities.Character
 {
     class CustomSkill
     {

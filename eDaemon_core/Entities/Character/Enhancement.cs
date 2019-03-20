@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eDaemon_core.Entities.CharacterSheet
+namespace eDaemon_core.Entities.Character
 {
     class Enhancement
     {

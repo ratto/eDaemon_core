@@ -12,7 +12,7 @@
  * enhance a distance type weapon skill.
  **/
 
-namespace eDaemon_core.Entities.CharacterSheet
+namespace eDaemon_core.Entities.Character
 {
     class WeaponSkill
     {

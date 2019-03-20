@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eDaemon_core
+namespace eDaemon_core.Entities.Character
 {
-    class CharClass
+    class Backpack
     {
-        
+
     }
 }
