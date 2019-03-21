@@ -14,17 +14,17 @@ namespace eDaemon_core.Entities.Character
         public int Age { get; set; }
         public int Level { get; set; }
         public double ExperiencePoints { get; set; }
-        public int HPTotal { get; set; }
-        public int HPCurrent { get; set; }
-        public int MPTotal { get; set; }
-        public int MPCurrent { get; set; }
+        public int HPTotal { get; set; } // Hit Points Total score
+        public int HPCurrent { get; set; } // Hit Points Current score
         public int HeroPoints { get; set; }
-        public int SPTotal { get; set; }
+        public int SPTotal { get; set; } // Skill points
+        public Backpack CarriedItems { get; set; } // Carried equipment and item
 
-        CharAttribute Attribute = new CharAttribute();
-        List<Enhancement> Enhancements = new List<Enhancement>();
-        List<CustomSkill> Skill = new List<CustomSkill>();
-        List<WeaponSkill> WpnSkill = new List<WeaponSkill>();
+        public CharAttribute Attribute { get; set; } = new CharAttribute();
+        public List<ProtectiveIndex> PI { get; set; } = new List<ProtectiveIndex>();
+        public List<Enhancement> Enhancements { get; set; } = new List<Enhancement>();
+        public List<CustomSkill> Skill { get; set; } = new List<CustomSkill>();
+        public List<WeaponSkill> WpnSkill { get; set; } = new List<WeaponSkill>();
 
         public Character()
         {
@@ -48,26 +48,40 @@ namespace eDaemon_core.Entities.Character
             HPCurrent = HPTotal;
         }
 
+        public void AddProtectiveIndex(ProtectiveIndex pi)
+        {
+            PI.Add(pi);
+        }
+        public void RemoveProtectiveIndex(ProtectiveIndex pi)
+        {
+            PI.Remove(pi);
+        }
+
         public void AddEnhancement(Enhancement enhancement)
         {
             Enhancements.Add(enhancement);
         }
+
         public void RemoveEnhancement(Enhancement enhancement)
         {
             Enhancements.Remove(enhancement);
         }
+
         public void AddCustomSkill(CustomSkill skill)
         {
             Skill.Add(skill);
         }
+
         public void RemoveSkill(CustomSkill skill)
         {
             Skill.Remove(skill);
         }
+
         public void AddWpnSkill(WeaponSkill wpnskill)
         {
             WpnSkill.Add(wpnskill);
         }
+
         public void RemoveWpnSkill(WeaponSkill wpnskill)
         {
             WpnSkill.Remove(wpnskill);
