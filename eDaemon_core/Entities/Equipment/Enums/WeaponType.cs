@@ -13,7 +13,8 @@ namespace eDaemon_core
         Hammer,
         Spear,
         Bow, 
-        Crossbow, 
+        Crossbow,
+        Shield,
         Natural
     }
 }

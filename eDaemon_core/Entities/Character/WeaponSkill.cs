@@ -17,18 +17,33 @@ namespace eDaemon_core.Entities.Character
     class WeaponSkill
     {
         public string Name { get; set; }
-        public double AttackBonus { get; set; }
-        public double DefenseBonus { get; set; }
+        public int AttributeBonus { get; set; }
+        public int AttackBonus { get; set; }
+        public int DefenseBonus { get; set; }
+        public int MiscAtkBonus { get; set; }
+        public int MiscDefBonus { get; set; }
 
         public WeaponSkill()
         {
 
         }
-        public WeaponSkill(string name, double attackBonus, double defenseBonus)
+
+        public WeaponSkill(string name, int attributeBonus, int attackBonus, int defenseBonus)
         {
             Name = name;
+            AttributeBonus = attributeBonus;
             AttackBonus = attackBonus;
             DefenseBonus = defenseBonus;
+        }
+
+        public int TotalAttackBonus()
+        {
+            return AttackBonus + MiscAtkBonus + (AttributeBonus * 4);
+        }
+
+        public int TotalDefenseBonus()
+        {
+            return DefenseBonus + MiscDefBonus + (AttributeBonus * 4);
         }
     }
 }

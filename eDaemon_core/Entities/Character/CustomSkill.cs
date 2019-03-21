@@ -10,23 +10,25 @@ namespace eDaemon_core.Entities.Character
     class CustomSkill
     {
         public string Name { get; set; }
-        public double AttributeModBonus { get; set; }
-        public double Bonus { get; set; }
+        public int AttributeBonus { get; set; }
+        public int SkillBonus { get; set; } = 0;
+        public int MiscBonus { get; set; } = 0;
         
         public CustomSkill()
         {
 
         }
-        public CustomSkill(string name, double attribute, double bonus)
+
+        public CustomSkill(string name, int attributeBonus, int skillBonus)
         {
             Name = name;
-            AttributeModBonus = attribute * 4;
-            Bonus = bonus;
+            AttributeBonus = attributeBonus;
+            SkillBonus = skillBonus;
         }
 
-        public void UseCustomSkill()
+        public int TotalSkillBonus()
         {
-
+            return SkillBonus + MiscBonus + (AttributeBonus * 4);
         }
     }
 }

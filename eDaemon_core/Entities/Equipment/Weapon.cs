@@ -8,7 +8,7 @@ namespace eDaemon_core.Entities.Equipment
         public int MinReach { get; set; }
         public int MaxReach { get; set; }
         public WeaponType Type { get; set; }
-        List<WpnDamage> WpnDamage = new List<WpnDamage>();
+        public List<WpnDamage> WpnDamage = new List<WpnDamage>();
 
         public Weapon()
         {

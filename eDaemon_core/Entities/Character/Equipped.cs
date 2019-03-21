@@ -9,6 +9,7 @@ namespace eDaemon_core.Entities.Character
         public Defensive Torso { get; set; } // Breast plates, shirts and other piece of clothing/armor used on the upper side of the body
         public Defensive Pants { get; set; } // Pants and othe piece of clothing/armor used on the bottom side of the body
         public Defensive Feet { get; set; } // Shoes, sandals and other foot protection gear 
+        public Weapon[] Arm { get; set; } = new Weapon[2];
 
         public Equipped()
         {
