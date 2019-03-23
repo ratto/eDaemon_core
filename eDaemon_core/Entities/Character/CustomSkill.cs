@@ -25,10 +25,5 @@ namespace eDaemon_core.Entities.Character
             AttributeBonus = attributeBonus;
             SkillBonus = skillBonus;
         }
-
-        public int TotalSkillBonus()
-        {
-            return SkillBonus + MiscBonus + (AttributeBonus * 4);
-        }
     }
 }

@@ -10,7 +10,7 @@ namespace eDaemon_core.Entities.Character
     class Character
     {
         // Basic character information
-        public string Name { get; }
+        public string Name { get; private set; }
         public int Age { get; set; }
         public int Level { get; set; }
         public double ExperiencePoints { get; set; }
@@ -221,11 +221,11 @@ namespace eDaemon_core.Entities.Character
             {
                 if ("Evade" == skill.Name)
                 {
-                    dodgeChance = skill.TotalSkillBonus();
+                    dodgeChance = skill.SkillBonus + (Attribute.Agility * 4);
                 }
                 else
                 {
-                    dodgeChance = Attribute.Agility;
+                    dodgeChance = Attribute.Agility * 4;
                 }
             }
 
